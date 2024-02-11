@@ -1,0 +1,65 @@
+\documentclass{response}
+\usepackage{lipsum}
+
+\def\author{Kakei \textit{et al.}}
+\def\title{\lipsum[1][1]}
+\begin{document}
+
+% Let's start point-by-point with Reviewer 1
+\reviewersection{Reviewer}{1}
+
+% Point one description 
+\begin{point}
+	\lipsum[1]
+\end{point}
+
+% Our reply
+\begin{response}
+	We agree with the reviewer on this important point. This is what we did to
+	fix it. 
+	\lipsum[2]
+\end{response}
+
+\begin{action}
+    \lipsum[1]
+    
+    \lipsum[1]
+    
+    \begin{change}[Section 1]
+    	\lipsum[2]
+     
+    	\lipsum[3]
+    \end{change}
+    
+    \lipsum[4]
+    
+    \begin{change}[Section 2]
+    	\lipsum[5]
+     
+    	\lipsum[6]
+    \end{change}
+\end{action}
+
+\begin{point}
+	\Reviewer's second point.
+	\label{pt:bar}
+\end{point}
+
+\begin{response}
+	And our reply to it.
+\end{response}
+
+% Begin a new reviewer section
+\reviewersection{Reviewer}{2}
+
+\begin{point}
+	This is the first point of Reviewer \Reviewer. With some more words foo
+	bar foo bar ...
+\end{point}
+
+\begin{response}
+	Our reply to it with reference to one of our points above using the \LaTeX's 
+	label/ref system (see also \ref{pt:foo}).
+\end{response}
+
+\end{document}

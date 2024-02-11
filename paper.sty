@@ -1,0 +1,20 @@
+\usepackage{xcolor,soul}
+\usepackage{ifthen}
+
+% 文章のハイライト（レビューモードのときにハイライトが有効）
+\newboolean{review}
+\setboolean{review}{false}
+\newcommand{\hltext}[2]{%
+    \ifthenelse{\boolean{review}}{
+        \begingroup
+        \sethlcolor{#1}%
+        \hl{#2}%
+        \endgroup
+    }{
+        #2
+    }
+}
+
+% 文章の文字色指定
+\newcommand\red[1]{{\color{red}#1}}
+\newcommand\blue[1]{{\color{blue}#1}}

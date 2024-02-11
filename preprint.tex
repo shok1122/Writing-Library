@@ -1,0 +1,40 @@
+\pdfoutput=1 % ensure pdflatex
+% \documentclass[11pt, twoside]{procdoc}
+\documentclass[11pt]{preprint}
+
+% tip: using the `IEEEeqnarray` environment is much nicer
+% than the `aligned` environment
+\usepackage{IEEEtrantools}
+
+% for the appendix
+\usepackage[title]{appendix}
+
+% dummy text
+\usepackage{lipsum}
+
+%\title{Sample document}
+\title{This is a much longer title name than necessary but will be useful to showcase the title block}
+\author[1]{First Author\thanks{This is a thanks footnote.}}
+\author[2]{Second Author}
+\affil[1]{Department One, Institution One, Address One}
+\affil[2]{Department Two, Institution Two, Address Two}
+\date{}
+
+% set running title and authors
+\makeatletter
+\def\runauthor{F. Author and S. Author}
+\def\runtitle{Running title}
+\makeatother
+
+\begin{document}
+\thispagestyle{empty}
+%
+
+\include{preprint-body}
+
+%
+% The appendix to the paper can be made one column
+%
+\include{preprint-appendix}
+
+\end{document}
